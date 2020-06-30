@@ -1,0 +1,28 @@
+{% extends "layout.html" %}
+
+
+{% block title %}
+    Register
+{% endblock %}
+
+{% block heading %}
+    Register
+{% endblock %}
+
+{% block body %}
+    <form action=" {{ url_for('redirection') }}" method="post">
+        <p>
+            {{form.username.label}}<br>
+            {{form.username(size=30)}}
+        </p>
+
+        <p>
+            {{form.password.label}}<br>
+            {{form.password(size=30)}}
+        </p>
+
+        <p>
+            {{form.submit()}}
+        </p>
+    </form>
+{% endblock %}
